@@ -54,14 +54,22 @@
 		260BE098256D52B000EE9E73 /* PracticaSwift */ = {
 			isa = PBXGroup;
 			children = (
-				260BE099256D52B000EE9E73 /* AppDelegate.swift */,
 				260BE09B256D52B000EE9E73 /* ViewController.swift */,
 				260BE09D256D52B000EE9E73 /* Main.storyboard */,
-				260BE0A0256D52B000EE9E73 /* Assets.xcassets */,
-				260BE0A2256D52B000EE9E73 /* LaunchScreen.storyboard */,
+				260BE0AB256D5E0C00EE9E73 /* Supporting Files */,
 				260BE0A5256D52B000EE9E73 /* Info.plist */,
 			);
 			path = PracticaSwift;
+			sourceTree = "<group>";
+		};
+		260BE0AB256D5E0C00EE9E73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				260BE099256D52B000EE9E73 /* AppDelegate.swift */,
+				260BE0A0256D52B000EE9E73 /* Assets.xcassets */,
+				260BE0A2256D52B000EE9E73 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

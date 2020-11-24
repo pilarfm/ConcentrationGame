@@ -9,17 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    var flipCount = 0
+    
+    
+    
+    @IBAction func touchCard(sender: UIButton) {
+        flipCard(withEmoji:"👻", on: sender)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func touchSecondCard(sender: UIButton) {
+        flipCard(withEmoji:"🎃", on: sender)
+    }
+    
+    func flipCard(withEmoji emoji:String, on button:UIButton){
+        if button.currentTitle == emoji {
+            button.setTitle("", forState: UIControlState.Normal)
+            button.backgroundColor = UIColor.orangeColor()
+            
+        } else {
+            button.setTitle(emoji, forState: UIControlState.Normal)
+            button.backgroundColor = UIColor.whiteColor()
+        }
     }
 
 
 }
-
