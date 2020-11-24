@@ -12,6 +12,8 @@
 		260BE09F256D52B000EE9E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260BE09D256D52B000EE9E73 /* Main.storyboard */; };
 		260BE0A1256D52B000EE9E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260BE0A0256D52B000EE9E73 /* Assets.xcassets */; };
 		260BE0A4256D52B000EE9E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260BE0A2256D52B000EE9E73 /* LaunchScreen.storyboard */; };
+		262372A9256D9E3B0038CE5A /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262372A8256D9E3B0038CE5A /* Concentration.swift */; };
+		262372AB256D9F650038CE5A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262372AA256D9F650038CE5A /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		260BE0A0256D52B000EE9E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		260BE0A3256D52B000EE9E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		260BE0A5256D52B000EE9E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262372A8256D9E3B0038CE5A /* Concentration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		262372AA256D9F650038CE5A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				260BE09B256D52B000EE9E73 /* ViewController.swift */,
+				262372AA256D9F650038CE5A /* Card.swift */,
 				260BE09D256D52B000EE9E73 /* Main.storyboard */,
+				262372A8256D9E3B0038CE5A /* Concentration.swift */,
 				260BE0AB256D5E0C00EE9E73 /* Supporting Files */,
 				260BE0A5256D52B000EE9E73 /* Info.plist */,
 			);
@@ -145,6 +151,8 @@
 			files = (
 				260BE09C256D52B000EE9E73 /* ViewController.swift in Sources */,
 				260BE09A256D52B000EE9E73 /* AppDelegate.swift in Sources */,
+				262372A9256D9E3B0038CE5A /* Concentration.swift in Sources */,
+				262372AB256D9F650038CE5A /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +302,7 @@
 				260BE0AA256D52B000EE9E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
