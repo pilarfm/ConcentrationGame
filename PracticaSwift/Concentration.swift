@@ -11,7 +11,7 @@ import Foundation
 class Concentration{
     
     var cards = [Card]()
-    
+    var totalScore = 0
     
     init(numberOfPairsOfCards: Int){
         for _ in 1...numberOfPairsOfCards {
@@ -28,11 +28,15 @@ class Concentration{
         for index in cards.indices{
             cards[index].isFaceUp = false
             cards[index].isMatched = false
+            cards[index].wasSeen = false
         }
+        totalScore = 0
     }
     
     
     func chooseCard(at index: Int){
+        
+        
         if !cards[index].isMatched{
             //3 cases: -no cards face up -2 cards are face up  -1 card face up
             if let matchIndex = indexOfOnlyFaceUp{
@@ -41,6 +45,12 @@ class Concentration{
                     if cards[matchIndex].identifier == cards[index].identifier {
                         cards[matchIndex].isMatched = true
                         cards[index].isMatched = true
+                        totalScore += 2
+                    }
+                    else{
+                        if cards[index].wasSeen{
+                            totalScore -= 1
+                        }
                     }
                     cards[index].isFaceUp = true
                     indexOfOnlyFaceUp = nil //because now there are 2 faceup cards
@@ -53,7 +63,10 @@ class Concentration{
                 cards[index].isFaceUp = true
                 indexOfOnlyFaceUp = index
             }
+        
         }
+        
+        cards[index].wasSeen = true
 
     }
 }

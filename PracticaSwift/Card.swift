@@ -13,6 +13,7 @@ struct Card{
     var isFaceUp = false
     var isMatched = false
     var identifier: Int
+    var wasSeen = false
     
     //static vars or funcs are used with the type not with the class. "global"
     

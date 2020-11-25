@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //SCORE LABEL
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    //NEWGAME BUTTON
     @IBAction func newGame(sender: UIButton) {
-        flipCount=0
-        flipCountLabel.text = "Flips: \(flipCount)"
+        flipCount = 0
+        score = 0
         game.playNewGame()
         updateViewFromModel()
     }
@@ -41,6 +45,14 @@ class ViewController: UIViewController {
         }
     }
     
+    //SCORE VAR
+    var score = 0 {
+        didSet{
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
+    
     
     func updateViewFromModel(){
         for index in cardButtons.indices{
@@ -55,6 +67,7 @@ class ViewController: UIViewController {
                 button.backgroundColor = card.isMatched ? UIColor.clearColor() : UIColor.orangeColor()
             }
         }
+        score = game.totalScore
     }
     
    
