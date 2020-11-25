@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PracticaSwift/ViewController.swift"
-            timestampString = "628023444.189738"
+            timestampString = "628028738.3429869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PracticaSwift/ViewController.swift"
-            timestampString = "628023444.189738"
+            timestampString = "628028738.3429869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "emoji(to:)"
             landmarkType = "5">
          </BreakpointContent>

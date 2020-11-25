@@ -86,6 +86,8 @@ class ViewController: UIViewController {
     var emojiChoices = ["🎃","👻","🍭","🍬","🙀","🔪","😈","✨"]
     
     
+    
+    
     func emoji(to card: Card) -> String {
         //if the dictionary position doesnt have an emoji assigned yet, it assigns it with a random index
         if emoji[card.identifier] == nil {
@@ -96,8 +98,9 @@ class ViewController: UIViewController {
         }
         return emoji[card.identifier] ?? "?"
     }
+    
 
 }
 
-    
-    
+
+
