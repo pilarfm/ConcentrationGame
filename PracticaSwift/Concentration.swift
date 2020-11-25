@@ -21,13 +21,29 @@ class Concentration{
         }
     }
     
+    var indexOfOnlyFaceUp: Int?
     
     func chooseCard(at index: Int){
-        if cards[index].isFaceUp{
-            cards[index].isFaceUp = false
-        }
-        else{
-            cards[index].isFaceUp = true
+        if !cards[index].isMatched{
+            //3 cases: -no cards face up -2 cards are face up  -1 card face up
+            if let matchIndex = indexOfOnlyFaceUp{
+                if matchIndex != index {
+                //check if they match
+                    if cards[matchIndex].identifier == cards[index].identifier {
+                        cards[matchIndex].isMatched = true
+                        cards[index].isMatched = true
+                    }
+                    cards[index].isFaceUp = true
+                    indexOfOnlyFaceUp = nil //because now there are 2 faceup cards
+                }
+            } else {
+                //either no cards or 2 cards are faceup
+                for flipDownIndex in cards.indices{
+                    cards[flipDownIndex].isFaceUp = false
+                }
+                cards[index].isFaceUp = true
+                indexOfOnlyFaceUp = index
+            }
         }
 
     }
