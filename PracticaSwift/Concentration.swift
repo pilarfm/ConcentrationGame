@@ -22,7 +22,13 @@ class Concentration{
     }
     
     
-    //func chooseCard(at index: Int){
-        
-    //}
+    func chooseCard(at index: Int){
+        if cards[index].isFaceUp{
+            cards[index].isFaceUp = false
+        }
+        else{
+            cards[index].isFaceUp = true
+        }
+
+    }
 }

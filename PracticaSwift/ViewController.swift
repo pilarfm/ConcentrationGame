@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     @IBAction func touchCard(sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.indexOf(sender){
-            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+            game.chooseCard(at: cardNumber)
+            updateViewFromModel()
         }
         else{
             print("chosen card was not in cardButtons")
@@ -34,24 +35,50 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func updateViewFromModel(){
+        for index in cardButtons.indices{
+            let button = cardButtons[index]
+            let card = game.cards[index]
+            if card.isFaceUp{
+                button.setTitle(emoji(to: card), forState: UIControlState.Normal)
+                button.backgroundColor = UIColor.whiteColor()
+            }
+            else{
+                button.setTitle("", forState: UIControlState.Normal)
+                button.backgroundColor = card.isMatched ? UIColor.clearColor() : UIColor.orangeColor()
+            }
+        }
+    }
+    
+   
+    
+    
     //GAME VAR (CONECTION WITH MODEL)
     lazy var game : Concentration = {
         return Concentration(numberOfPairsOfCards: (self.cardButtons.count + 1) / 2)
     }()
     
-    //EMOJIS ARRAY
-    var emojiChoices = ["🎃","👻","🎃","👻"]
+    
+    //EMOJIS
+    
+    var emoji = Dictionary<Int,String>()  // o  var emoji = [Int:String]()
+    
+    var emojiChoices = ["🎃","👻","🍭","🍬","🙀","🔪","😈","✨"]
     
     
-    //FLIPCARD FUNCTION
-    func flipCard(withEmoji emoji:String, on button:UIButton){
-        if button.currentTitle == emoji {
-            button.setTitle("", forState: UIControlState.Normal)
-            button.backgroundColor = UIColor.orangeColor()
-            
-        } else {
-            button.setTitle(emoji, forState: UIControlState.Normal)
-            button.backgroundColor = UIColor.whiteColor()
+    func emoji(to card: Card) -> String {
+        //if the dictionary position doesnt have an emoji assigned yet, it assigns it with a random index
+        if emoji[card.identifier] == nil {
+            if emojiChoices.count > 0 {
+                let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
+                emoji[card.identifier] = emojiChoices.removeAtIndex(randomIndex)
+            }
         }
+        return emoji[card.identifier] ?? "?"
     }
+
 }
+
+    
+    
