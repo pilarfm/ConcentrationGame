@@ -23,6 +23,15 @@ class Concentration{
     
     var indexOfOnlyFaceUp: Int?
     
+    
+    func playNewGame(){
+        for index in cards.indices{
+            cards[index].isFaceUp = false
+            cards[index].isMatched = false
+        }
+    }
+    
+    
     func chooseCard(at index: Int){
         if !cards[index].isMatched{
             //3 cases: -no cards face up -2 cards are face up  -1 card face up

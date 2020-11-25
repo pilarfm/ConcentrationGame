@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func newGame(sender: UIButton) {
+        flipCount=0
+        flipCountLabel.text = "Flips: \(flipCount)"
+        game.playNewGame()
+        updateViewFromModel()
+    }
     //CARDBUTTONS ARRAY
     @IBOutlet var cardButtons: [UIButton]!
     
