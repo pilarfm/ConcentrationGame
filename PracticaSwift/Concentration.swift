@@ -22,7 +22,7 @@ class Concentration{
     }
     
     
-    func chooseCard(at index: Int){
+    //func chooseCard(at index: Int){
         
-    }
+    //}
 }

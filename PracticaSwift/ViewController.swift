@@ -10,23 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //CARDBUTTONS ARRAY
+    @IBOutlet var cardButtons: [UIButton]!
     
-    
-    var game = Concentration()
-    
-    var flipCount = 0 {
-        didSet{
-            flipCountLabel.text = "Flips: \(flipCount)"
-            
-        }
-    }
-    @IBOutlet var cardButtons: [UIButton]! 
-    
-    var emojiChoices = ["🎃","👻","🎃","👻"]
-    
-    
+    //FLIPCOUNT LABEL
     @IBOutlet weak var flipCountLabel: UILabel!
     
+    //TOUCHCARD BUTTON
     @IBAction func touchCard(sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.indexOf(sender){
@@ -35,9 +25,25 @@ class ViewController: UIViewController {
         else{
             print("chosen card was not in cardButtons")
         }
-    
     }
     
+    //FLIPCOUNT VAR
+    var flipCount = 0 {
+        didSet{
+            flipCountLabel.text = "Flips: \(flipCount)"
+        }
+    }
+    
+    //GAME VAR (CONECTION WITH MODEL)
+    lazy var game : Concentration = {
+        return Concentration(numberOfPairsOfCards: (self.cardButtons.count + 1) / 2)
+    }()
+    
+    //EMOJIS ARRAY
+    var emojiChoices = ["🎃","👻","🎃","👻"]
+    
+    
+    //FLIPCARD FUNCTION
     func flipCard(withEmoji emoji:String, on button:UIButton){
         if button.currentTitle == emoji {
             button.setTitle("", forState: UIControlState.Normal)

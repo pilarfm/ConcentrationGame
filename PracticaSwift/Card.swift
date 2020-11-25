@@ -14,7 +14,7 @@ struct Card{
     var isMatched = false
     var identifier: Int
     
-    //static vars or funcs can are used with the type not with the class. "global"
+    //static vars or funcs are used with the type not with the class. "global"
     
     static var identifierFactory = 0
     
