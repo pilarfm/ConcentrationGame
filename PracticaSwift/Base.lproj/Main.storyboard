@@ -196,21 +196,6 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dai-ay-cs9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-Cb-zKQ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="224" width="90" height="136"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="329" width="66" height="96"/>
-                                </variation>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dB-2N-dfA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qct-85-ISB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,6 +278,21 @@
                                     <rect key="frame" x="146" y="568" width="161" height="38"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-Cb-zKQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="224" width="90" height="136"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="329" width="66" height="96"/>
+                                </variation>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dB-2N-dfA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <variation key="default">
@@ -309,13 +309,13 @@
                                 <exclude reference="UZ4-1Q-Gbx"/>
                                 <exclude reference="JSL-Ca-gy5"/>
                                 <exclude reference="6uC-pi-Zgo"/>
-                                <exclude reference="8WM-Cb-zKQ"/>
                                 <exclude reference="qct-85-ISB"/>
                                 <exclude reference="T4E-g8-ohT"/>
                                 <exclude reference="xCm-PD-TVd"/>
                                 <exclude reference="R4g-4r-g1p"/>
                                 <exclude reference="Iyk-Xn-EF7"/>
                                 <exclude reference="Cxx-bq-4u7"/>
+                                <exclude reference="8WM-Cb-zKQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -337,12 +337,12 @@
                                 <include reference="UZ4-1Q-Gbx"/>
                                 <include reference="JSL-Ca-gy5"/>
                                 <include reference="6uC-pi-Zgo"/>
-                                <include reference="8WM-Cb-zKQ"/>
                                 <include reference="qct-85-ISB"/>
                                 <include reference="T4E-g8-ohT"/>
                                 <include reference="xCm-PD-TVd"/>
                                 <include reference="R4g-4r-g1p"/>
                                 <include reference="Iyk-Xn-EF7"/>
+                                <include reference="8WM-Cb-zKQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -370,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4746" y="-402"/>
+            <point key="canvasLocation" x="-4711.5" y="-501.75"/>
         </scene>
     </scenes>
 </document>
